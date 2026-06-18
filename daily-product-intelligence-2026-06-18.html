@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日新颖消费品情报报告 - 2026-06-18</title>
+  <style>
+    :root {
+      --ink: #17242b;
+      --muted: #61727b;
+      --line: #d8e4e8;
+      --soft: #f4f8fa;
+      --paper: #ffffff;
+      --accent: #0d766d;
+      --accent-2: #1d4ed8;
+      --good: #166534;
+      --warn: #b45309;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #e7edf0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.55;
+    }
+    a { color: var(--accent-2); text-decoration: none; }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 18px auto;
+      padding: 17mm 15mm;
+      background: var(--paper);
+      box-shadow: 0 16px 42px rgba(23, 36, 43, 0.14);
+    }
+    header {
+      display: grid;
+      grid-template-columns: 1.45fr 0.55fr;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--ink);
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      font-size: 31px;
+      line-height: 1.1;
+    }
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .meta {
+      align-self: end;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #f7fbfc 0%, #edf5f7 100%);
+      font-size: 12px;
+    }
+    .meta strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 14px 0 16px;
+    }
+    .summary-card {
+      padding: 10px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      background: #fbfdfe;
+    }
+    .summary-card b {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 12px;
+    }
+    .summary-card span {
+      color: var(--muted);
+      font-size: 11px;
+    }
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 14px 0 10px;
+      font-size: 18px;
+    }
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 20px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+    .product {
+      display: grid;
+      grid-template-columns: 43% 57%;
+      gap: 14px;
+      margin-bottom: 14px;
+      padding: 12px;
+      border: 1px solid var(--line);
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      align-content: start;
+    }
+    .gallery img {
+      width: 100%;
+      height: 152px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+    .gallery.two img { height: 196px; }
+    .gallery.three .wide {
+      grid-column: span 2;
+      height: 176px;
+    }
+    .caption {
+      margin-top: 6px;
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+    .warn-text { color: var(--warn); }
+    .product-title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+    h2 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.22;
+    }
+    .source-button {
+      flex: 0 0 auto;
+      display: inline-block;
+      padding: 5px 9px;
+      border: 1px solid #bdd2f4;
+      border-radius: 999px;
+      background: #edf4ff;
+      color: var(--accent-2);
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .title-links {
+      margin: 5px 0 9px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+    .tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e7f5f2;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+    }
+    .tag.blue { background: #e8f0ff; color: var(--accent-2); }
+    .tag.good { background: #ebf8ef; color: var(--good); }
+    .tag.warn { background: #fff4e8; color: var(--warn); }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+    .field {
+      padding: 7px;
+      border: 1px solid #ecf1f4;
+      background: var(--soft);
+      font-size: 11.5px;
+    }
+    .field strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .field.full { grid-column: span 2; }
+    .source-list {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background: #fbfdfe;
+      font-size: 12px;
+    }
+    .source-list ol {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .source-list li + li { margin-top: 6px; }
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <p class="eyebrow">Daily Product Intelligence</p>
+        <h1>每日新颖消费品情报报告</h1>
+        <p class="subtitle">聚焦日本市场季节性需求、零售新品节奏与 OEM 可落地空间，优先筛选图片完整、公开可验证、可进一步找厂的消费品机会。</p>
+      </div>
+      <aside class="meta">
+        <strong>报告信息</strong>
+        报告日期：2026-06-18<br>
+        制作人：供应链部门
+      </aside>
+    </header>
+
+    <section class="summary">
+      
+      <div class="summary-card">
+        <b>结论 1</b>
+        <span>今天最强信号集中在“高温降温小电器”“梅雨季个护”“车内场景升级”三条线上，季节性驱动明确，转单窗口短。</span>
+      </div>
+
+      <div class="summary-card">
+        <b>结论 2</b>
+        <span>最适合立即做供应链验证的是 spot cooler、冰风扇、家庭大盘面热板、车用功能型收纳件；美妆线适合做包装与叙事改良，不适合纯同款。本期全部产品均能从日本公开发布页或公开销售页回查，公开可验证程度整体偏高。</span>
+      </div>
+    </section>
+
+    <h3 class="section-title">产品机会卡片</h3>
+    
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img class="" src="./assets/2026-06-18/straine-humidity-shampoo-1.jpg" alt="Straine 主视觉">
+          <img class="" src="./assets/2026-06-18/straine-humidity-shampoo-2.png" alt="Straine 产品图">
+          <img class="" src="./assets/2026-06-18/straine-humidity-shampoo-3.jpg" alt="Straine 卖点图">
+          <img class="" src="./assets/2026-06-18/straine-humidity-shampoo-4.jpg" alt="Straine 场景图">
+        </div>
+        
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Straine 梅雨季控毛躁洗护线</h2>
+            <div class="title-links">原页面：<a href="https://straine.jp/">Straine 官方页</a> ｜ 发现来源：<a href="https://prtimes.jp/main/html/rd/p/000000121.000061176.html">PR TIMES</a></div>
+          </div>
+          <span class="source-button">高湿洗护</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本品牌 / PR 发布</span>
+          <span class="tag blue">适合：美容个护 / 日化 OEM 客户</span>
+          <span class="tag good">阶段：可进入供应链验证</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>把“高温多湿导致的膨胀、毛躁、塌陷”单独做成换季换洗发水理由，抓的是日本 6-7 月极强的即时场景需求。</div>
+          <div class="field"><strong>适合的客户</strong>美容个护 / 日化 OEM 客户</div>
+          <div class="field"><strong>日本市场适配</strong>日本梅雨季和夏季湿热环境长期稳定，适合药妆、电商、Loft 类杂货渠道做季节性陈列和试用装转化。</div>
+          <div class="field"><strong>供应链判断</strong>非常适合 OEM。重点不是复制成分，而是把“梅雨季专线”做成更强的视觉、香型、旅行装和试用套装组合。</div>
+          <div class="field"><strong>可信度判断</strong>高。品牌活动时间、产品方向和官方站点均公开，属于已在日本品牌端落地的确定性信号。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。PR 发布页与品牌官网均可公开访问。</div>
+          <div class="field"><strong>风险点</strong>洗护赛道竞争密集，如果没有气味、功效叙事、便携规格或高湿场景测试素材，很容易被归为普通顺滑洗护。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>优先让工厂评估“高湿控毛躁”小系列：洗发、护发、发膜、1DAY 旅行装四件组，并同步打样潮湿场景测试对比图。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img class="" src="./assets/2026-06-18/nitori-wide-hotplate-1.jpg" alt="Nitori 宽体热板主图">
+          <img class="" src="./assets/2026-06-18/nitori-wide-hotplate-2.jpg" alt="Nitori 使用场景">
+          <img class="" src="./assets/2026-06-18/nitori-wide-hotplate-3.jpg" alt="Nitori 料理展示">
+          <img class="" src="./assets/2026-06-18/nitori-wide-hotplate-4.png" alt="Nitori 规格卖点图">
+        </div>
+        
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Nitori 双盘面宽体热板</h2>
+            <div class="title-links">原页面：<a href="https://www.nitori-net.jp/ec/product/2113400063723s/">Nitori 商品页</a> ｜ 发现来源：<a href="https://prtimes.jp/main/html/rd/p/000001560.000073913.html">PR TIMES</a></div>
+          </div>
+          <span class="source-button">厨房热板</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本零售品牌 / 日本电商</span>
+          <span class="tag blue">适合：厨房用品 / 家用小电器客户</span>
+          <span class="tag good">阶段：值得联系工厂</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>一次可做约 60 个饺子，双盘面覆盖家庭聚餐和派对场景，把“大容量热板”做成明确的家庭社交卖点。</div>
+          <div class="field"><strong>适合的客户</strong>厨房用品 / 家用小电器客户</div>
+          <div class="field"><strong>日本市场适配</strong>很适合日本家庭周末聚餐、儿童餐、露营前备餐等场景，也符合日本零售对“省时、可视、多人共享”的厨房叙事。</div>
+          <div class="field"><strong>供应链判断</strong>适合找小家电厂做宽盘面、双温区、煎烤两用或饺子专用版本。也可以向锅盖、配件盘、收纳套装方向改良。</div>
+          <div class="field"><strong>可信度判断</strong>高。Nitori 已公开上架，发布时间明确，属于已进入零售通路的成熟新品。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。PR 发布页与 Nitori 商品页均可公开访问。</div>
+          <div class="field"><strong>风险点</strong>热板类赛道已经很成熟，如果只做放大尺寸而不做分区温控、清洁便利性或套装玩法，差异化不够。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>优先验证三条改良路线：大饺子盘、煎烤火锅二合一盘、可折叠收纳方案；同时评估日本 PSE 和涂层耐用性。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img class="" src="./assets/2026-06-18/tansu-spot-cooler-1.jpg" alt="Spot Cooler 主图">
+          <img class="" src="./assets/2026-06-18/tansu-spot-cooler-2.jpg" alt="Spot Cooler 场景图">
+          <img class="" src="./assets/2026-06-18/tansu-spot-cooler-3.jpg" alt="Spot Cooler 使用环境">
+          <img class="" src="./assets/2026-06-18/tansu-spot-cooler-4.jpg" alt="Spot Cooler 结构图">
+        </div>
+        
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Tansu no Gen 工业级 Spot Cooler 双机型</h2>
+            <div class="title-links">原页面：<a href="https://www.tansu-gen.jp/collections/spot_cooler/products/79700012">79700012 商品页</a> / <a href="https://www.tansu-gen.jp/collections/spot_cooler/products/79700013">79700013 商品页</a> ｜ 发现来源：<a href="https://prtimes.jp/main/html/rd/p/000000418.000039747.html">PR TIMES</a> / <a href="https://item.rakuten.co.jp/tansu/79700012/">Rakuten 店铺</a></div>
+          </div>
+          <span class="source-button">高温降温</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本零售品牌 / 日本电商</span>
+          <span class="tag blue">适合：家用小电器 / 户外园艺 / 劳保场景客户</span>
+          <span class="tag good">阶段：值得联系工厂</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>直接承接日本热中症对策需求，强调 45 摄氏度环境可用、局部定点送风，属于高温工作和仓储场景的刚需设备。</div>
+          <div class="field"><strong>适合的客户</strong>家用小电器 / 户外园艺 / 劳保场景客户</div>
+          <div class="field"><strong>日本市场适配</strong>日本 6-9 月高温作业需求很强，园艺、物流、工位降温、车库维修、户外作业都能接住。</div>
+          <div class="field"><strong>供应链判断</strong>适合能力型小家电工厂或工业风机工厂切入。除了整机，也有风管、过滤、脚轮、机壳、降噪外罩等配件机会。</div>
+          <div class="field"><strong>可信度判断</strong>高。品牌官方发布并同步导向自营站、Rakuten 与 Yahoo 购买链路。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。PR 页、自营站和电商店铺均公开可访问。</div>
+          <div class="field"><strong>风险点</strong>整机类涉及压缩机、噪音、耗电、安全认证和售后维修，不适合普通白牌卖家直接跟款。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>优先判断客户是做整机还是做周边。普通客户更适合从移动风管、导风罩、过滤件、降噪附件切入。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img class="" src="./assets/2026-06-18/thanko-usb-ice-fan-1.jpg" alt="USB Spot Ice Fan 主图">
+          <img class="" src="./assets/2026-06-18/thanko-usb-ice-fan-2.jpg" alt="USB Spot Ice Fan 细节图">
+          <img class="" src="./assets/2026-06-18/thanko-usb-ice-fan-3.jpg" alt="USB Spot Ice Fan 使用图">
+          <img class="" src="./assets/2026-06-18/thanko-usb-ice-fan-4.jpg" alt="USB Spot Ice Fan 结构示意">
+        </div>
+        
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>THANKO USB Spot Ice Fan 冰瓶冷风扇</h2>
+            <div class="title-links">原页面：<a href="https://www.thanko.jp/view/item/000000004644">THANKO 商品页</a> ｜ 发现来源：<a href="https://prtimes.jp/main/html/rd/p/000000452.000111905.html">PR TIMES</a></div>
+          </div>
+          <span class="source-button">桌面清凉</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本创意家电 / 官方商城</span>
+          <span class="tag blue">适合：家用小电器 / 办公清凉用品客户</span>
+          <span class="tag good">阶段：可进入供应链验证</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>不需要排热管和安装工序，靠保冷瓶做更低门槛的局部冷风，击中办公室、书桌、租房桌面和临时工位场景。</div>
+          <div class="field"><strong>适合的客户</strong>家用小电器 / 办公清凉用品客户</div>
+          <div class="field"><strong>日本市场适配</strong>日本桌面个人清凉用品常年有销量，高温办公室、宿舍、直播桌面和厨房辅助位都容易形成即时购买。</div>
+          <div class="field"><strong>供应链判断</strong>很适合做 OEM 轻改良。可从更静音、更好看、更大容量冷媒瓶、磁吸拆洗结构、USB-C 供电几条路线做差异。</div>
+          <div class="field"><strong>可信度判断</strong>高。THANKO 官方商城在售，产品逻辑清楚，属于典型创意小电器商品化案例。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。官方商城与 PR 页面均可公开访问。</div>
+          <div class="field"><strong>风险点</strong>若冷却体感不稳定，评价区会快速翻车；同时要注意冷凝水处理、噪音和实际降温幅度不能夸大。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>先让工厂验证三点：冷媒瓶续航、风量噪音平衡、冷凝水控制。普通客户可优先做“桌面清凉礼盒版”。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img class="" src="./assets/2026-06-18/craftworks-hiace-console-1.jpg" alt="Console Box 主图">
+          <img class="" src="./assets/2026-06-18/craftworks-hiace-console-2.jpg" alt="Console Box 结构图">
+          <img class="" src="./assets/2026-06-18/craftworks-hiace-console-3.jpg" alt="Console Box 细节图">
+          <img class="" src="./assets/2026-06-18/craftworks-hiace-console-4.jpg" alt="Console Box 安装图">
+        </div>
+        
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>CRAFTWORKS Hiace LED Console Box 新版</h2>
+            <div class="title-links">原页面：<a href="https://www.amazon.co.jp/stores/page/598EB77B-B005-47D4-BA52-B4E6E348DFEB?channel=PRT-A1623HICRC">Amazon 官方店</a> / <a href="https://item.rakuten.co.jp/auto1direct/a1623hicrc/">Rakuten 商品页</a> ｜ 发现来源：<a href="https://prtimes.jp/main/html/rd/p/000001034.000079792.html">PR TIMES</a> / <a href="https://store.shopping.yahoo.co.jp/wadoo/a1623hicrc-bk-ac.html">Yahoo! Shopping</a></div>
+          </div>
+          <span class="source-button">车内升级</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本电商 / 日本品牌 PR</span>
+          <span class="tag blue">适合：户外用品 / 车用品 / OEM 客户</span>
+          <span class="tag good">阶段：值得联系工厂</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>针对 Hiace 200 系用户把扶手、储物、LED 氛围和稳固固定一次做好，解决车内改装件“好看但不好用”的老问题。</div>
+          <div class="field"><strong>适合的客户</strong>户外用品 / 车用品 / OEM 客户</div>
+          <div class="field"><strong>日本市场适配</strong>日本 vanlife、车中泊、商用车升级和轻改装需求稳定，Hiace 又是极成熟的用户群体，卖点容易被理解。</div>
+          <div class="field"><strong>供应链判断</strong>非常适合找车品和注塑工厂验证。可延展到不同车型、加装 USB、无线充、杯架分区或软包版本。</div>
+          <div class="field"><strong>可信度判断</strong>高。品牌已同步导向 Amazon、Rakuten 和 Yahoo 三平台，说明产品已进入可卖状态。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。PR 发布页和多个公开销售渠道均可访问。</div>
+          <div class="field"><strong>风险点</strong>车型专用件一旦尺寸误差或装配干涉处理不好，退货率会高；车内异响与材质气味也会影响评分。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>优先让工厂评估车型开模和小批量改款能力，再决定走 Hiace 专车专用还是通用模组化路线。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img class="" src="./assets/2026-06-18/hince-hug-layer-cheek-1.png" alt="hince 腮红主图">
+          <img class="" src="./assets/2026-06-18/hince-hug-layer-cheek-2.png" alt="hince 色号图">
+          <img class="" src="./assets/2026-06-18/hince-hug-layer-cheek-3.png" alt="hince 质地图">
+          <img class="" src="./assets/2026-06-18/hince-hug-layer-cheek-4.png" alt="hince 妆效图">
+        </div>
+        
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>hince Hug Layer Cheek 叠层腮红</h2>
+            <div class="title-links">原页面：<a href="https://hince.jp">hince 日本站</a> / <a href="https://www.qoo10.jp/shop/hinceofficial">Qoo10 官方店</a> ｜ 发现来源：<a href="https://prtimes.jp/main/html/rd/p/000000104.000068659.html">PR TIMES</a> / <a href="https://www.rakuten.co.jp/hincejapan">Rakuten 官方店</a></div>
+          </div>
+          <span class="source-button">彩妆新色</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本电商 / 韩妆品牌日本发售</span>
+          <span class="tag blue">适合：美容个护 / 彩妆 OEM 客户</span>
+          <span class="tag good">阶段：可进入供应链验证</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>强调“无需技巧也能叠出柔雾血色感”，本质是在包装、色彩命名和新手友好体验上做轻门槛高颜值产品。</div>
+          <div class="field"><strong>适合的客户</strong>美容个护 / 彩妆 OEM 客户</div>
+          <div class="field"><strong>日本市场适配</strong>日本 Qoo10、ZOZO、美妆集合店对韩妆新色和限定概念反应快，适合做轻上新、强视觉、社媒传播型产品。</div>
+          <div class="field"><strong>供应链判断</strong>适合彩妆 OEM 研究粉体压盘、双色混盘、色号故事和外壳磁吸包装，不建议只跟色不跟体验。</div>
+          <div class="field"><strong>可信度判断</strong>中高。日本销售链路明确，品牌日站和多个公开渠道都在承接，但更偏彩妆趋势型机会。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。PR 页面、日本站和官方店铺均可公开访问。</div>
+          <div class="field"><strong>风险点</strong>彩妆新品节奏快，单靠一个新色名不够；压盘手感、显色、持妆和包装高级感决定复购。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>建议先找彩妆工厂打样两条路线：双色渐层盘和带镜磁吸小盘，同时测试更适合日本市场的低饱和度命名体系。</div>
+        </div>
+      </div>
+    </article>
+
+    <h3 class="section-title">来源链接</h3>
+    <section class="source-list">
+      <ol>
+        <li><a href="https://straine.jp/">Straine 官方页</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000000121.000061176.html">PR TIMES</a></li>
+        <li><a href="https://www.nitori-net.jp/ec/product/2113400063723s/">Nitori 商品页</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000001560.000073913.html">PR TIMES</a></li>
+        <li><a href="https://www.tansu-gen.jp/collections/spot_cooler/products/79700012">79700012 商品页</a></li>
+        <li><a href="https://www.tansu-gen.jp/collections/spot_cooler/products/79700013">79700013 商品页</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000000418.000039747.html">PR TIMES</a></li>
+        <li><a href="https://item.rakuten.co.jp/tansu/79700012/">Rakuten 店铺</a></li>
+        <li><a href="https://www.thanko.jp/view/item/000000004644">THANKO 商品页</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000000452.000111905.html">PR TIMES</a></li>
+        <li><a href="https://www.amazon.co.jp/stores/page/598EB77B-B005-47D4-BA52-B4E6E348DFEB?channel=PRT-A1623HICRC">Amazon 官方店</a></li>
+        <li><a href="https://item.rakuten.co.jp/auto1direct/a1623hicrc/">Rakuten 商品页</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000001034.000079792.html">PR TIMES</a></li>
+        <li><a href="https://store.shopping.yahoo.co.jp/wadoo/a1623hicrc-bk-ac.html">Yahoo! Shopping</a></li>
+        <li><a href="https://hince.jp">hince 日本站</a></li>
+        <li><a href="https://www.qoo10.jp/shop/hinceofficial">Qoo10 官方店</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000000104.000068659.html">PR TIMES</a></li>
+        <li><a href="https://www.rakuten.co.jp/hincejapan">Rakuten 官方店</a></li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

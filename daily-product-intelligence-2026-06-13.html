@@ -1,0 +1,619 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日新颖消费品情报报告 - 2026-06-13</title>
+  <style>
+    :root {
+      --ink: #172026;
+      --muted: #69747c;
+      --line: #dfe6ea;
+      --soft: #f5f8fa;
+      --accent: #0f766e;
+      --accent-2: #0f4c81;
+      --good: #166534;
+      --warn: #9a3412;
+      --paper: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: #e9eef1;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.55;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 24px auto;
+      padding: 20mm 18mm;
+      background: var(--paper);
+      box-shadow: 0 18px 60px rgba(23, 32, 38, 0.16);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 18px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.15;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta {
+      align-self: end;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: var(--soft);
+      font-size: 12px;
+    }
+
+    .meta strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+      font-size: 13px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .summary-card {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      background: #fbfcfd;
+    }
+
+    .summary-card b {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+
+    .summary-card span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 20px 0 12px;
+      font-size: 17px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 20px;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 42% 58%;
+      gap: 16px;
+      margin-bottom: 18px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      break-inside: avoid;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 168px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .caption {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    .product-title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.25;
+    }
+
+    .source-line {
+      margin: 4px 0 8px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .source-button {
+      flex: 0 0 auto;
+      display: inline-block;
+      padding: 5px 9px;
+      border: 1px solid #b9d4e7;
+      border-radius: 999px;
+      background: #eef7fd;
+      color: var(--accent-2);
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e8f4f2;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .tag.blue { background: #e8f0f7; color: var(--accent-2); }
+    .tag.warn { background: #fff1e8; color: var(--warn); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .field {
+      padding: 8px;
+      background: var(--soft);
+      border: 1px solid #edf1f3;
+      font-size: 12px;
+    }
+
+    .field b {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--ink);
+      font-size: 11px;
+    }
+
+    .wide {
+      grid-column: 1 / -1;
+    }
+
+    .decision {
+      margin-top: 10px;
+      padding: 10px 12px;
+      border-left: 4px solid var(--good);
+      background: #eff8f0;
+      font-size: 12px;
+    }
+
+    .decision b {
+      color: var(--good);
+    }
+
+    .source-list {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+      }
+
+      .page {
+        width: auto;
+        min-height: auto;
+        margin: 0;
+        padding: 16mm 15mm;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <p class="eyebrow">Daily Product Intelligence</p>
+        <h1>每日新颖消费品情报报告</h1>
+        <p class="subtitle">面向日本电商、OEM、家居杂货、美容个护、户外园艺、宠物用品与家用小电器客户的趋势产品初筛。</p>
+      </div>
+      <div class="meta">
+        <strong>报告日期：2026-06-13</strong>
+        制作人：供应链部门
+      </div>
+    </header>
+
+    <section class="summary">
+      <div class="summary-card">
+        <b>今日判断</b>
+        <span>今天最值得先推进的是 BlastBoss、SilkiPro Straight、Ninja Crispi Pro。这三条线都能拆成功能卖点再回到 OEM。</span>
+      </div>
+      <div class="summary-card">
+        <b>供应链优先级</b>
+        <span>优先验证轻量清洁工具、湿发直发一体美发器、玻璃容器型厨房电器系统，不先追高复杂整机。</span>
+      </div>
+      <div class="summary-card">
+        <b>推荐动作</b>
+        <span>不要急着找同款。先拆结构、附件、配色、套装和使用场景，再找能做日本市场差异化的小批量工厂。</span>
+      </div>
+    </section>
+
+    <h2 class="section-title">产品机会卡片</h2>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="assets/2026-06-13/blastboss-1.jpg" alt="Shark BlastBoss 产品主图">
+          <img src="assets/2026-06-13/blastboss-2.jpg" alt="Shark BlastBoss 婴儿车碎屑清洁场景">
+          <img src="assets/2026-06-13/blastboss-3.jpg" alt="Shark BlastBoss 附件组合图">
+          <img src="assets/2026-06-13/blastboss-4.jpg" alt="Shark BlastBoss 备用图">
+        </div>
+        <p class="caption">图片来源：The Verge / Tom's Guide。用于展示主机外观、碎屑清洁场景与三种附件组合。</p>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Shark BlastBoss 室内外一体空气清扫器</h2>
+            <div class="source-line">
+              <a href="https://www.sharkninja.com/shark-blastboss-indoor-outdoor-air-blasting-system-charcoal/AB2111.html">官方页</a> /
+              <a href="https://www.theverge.com/tech/902550/shark-blastboss-blower-adjustable-broom-accessory-price-availability">The Verge</a> /
+              <a href="https://www.tomsguide.com/home/shark-launched-an-air-blaster-that-works-both-indoors-and-out-and-ill-be-first-in-line-to-try-it">Tom's Guide</a>
+            </div>
+          </div>
+          <a class="source-button" href="https://www.sharkninja.com/shark-blastboss-indoor-outdoor-air-blasting-system-charcoal/AB2111.html">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">家居清洁</span>
+          <span class="tag blue">户外工具</span>
+          <span class="tag blue">OEM 可改良</span>
+          <span class="tag">日本适配</span>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <b>核心卖点</b>
+            190mph 可调气流。室内碎屑、窗轨灰尘、车内缝隙、庭院轻清扫一机覆盖。
+          </div>
+          <div class="field">
+            <b>适合客户</b>
+            日本电商卖家、家居杂货客户、户外园艺客户、小家电 OEM 客户。
+          </div>
+          <div class="field">
+            <b>日本市场适配</b>
+            比传统吹叶机更适合阳台、玄关、车内、小庭院等高频小空间场景。
+          </div>
+          <div class="field">
+            <b>可信度</b>
+            高。官方页、媒体页、附件图与价格信息一致，公开可验证程度高。
+          </div>
+          <div class="field wide">
+            <b>供应链判断</b>
+            值得联系工厂。更适合拆成低噪版、桌面版、宠物浮毛版、车载版与附件组合版，而不是只追同外观。
+          </div>
+          <div class="field wide">
+            <b>风险点 + 产品级下一步建议</b>
+            低价仿款会快速同质化，噪声和续航也容易翻车。优先找无刷电机和风道成熟工厂，先做三套样机：桌面清灰、车载清缝、庭院轻清扫。
+          </div>
+        </div>
+        <div class="decision">
+          <b>当前阶段：</b>值得联系工厂。它本质上是“高频碎片清洁工具”，不是普通园艺吹叶机，适合短视频转化和 OEM 配件升级。
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="assets/2026-06-13/lilmilo-1.jpg" alt="LilMilo 近景图">
+          <img src="assets/2026-06-13/lilmilo-2.jpg" alt="LilMilo 配饰和不同造型">
+          <img src="assets/2026-06-13/lilmilo-3.png" alt="LilMilo 居家场景图">
+          <img src="assets/2026-06-13/lilmilo-4.png" alt="LilMilo 官方细节图">
+        </div>
+        <p class="caption">图片来源：TechRadar / Tom's Guide / ECOVACS。用于展示正面表情、配饰玩法、家居场景与官方细节。</p>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>ECOVACS LilMilo 情绪陪伴机器宠物</h2>
+            <div class="source-line">
+              <a href="https://www.techradar.com/home/smart-home/ecovacs-new-launch-nearly-made-me-cry-during-my-ces-booth-tour">TechRadar</a> /
+              <a href="https://www.tomsguide.com/home/smart-home/forget-robot-vacuums-ecovacs-most-exciting-product-at-ces-2026-was-its-upcoming-ai-powered-pet-companion">Tom's Guide</a> /
+              <a href="https://geardiary.com/2026/01/06/ecovacs-ces-2/">Gear Diary</a>
+            </div>
+          </div>
+          <a class="source-button" href="https://www.techradar.com/home/smart-home/ecovacs-new-launch-nearly-made-me-cry-during-my-ces-booth-tour">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">宠物用品</span>
+          <span class="tag blue">AI 玩具</span>
+          <span class="tag">高话题</span>
+          <span class="tag warn">暂不追整机</span>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <b>核心卖点</b>
+            模拟宠物行为，能识别主人、响应触摸，外形和配饰天然适合内容传播。
+          </div>
+          <div class="field">
+            <b>适合客户</b>
+            宠物用品客户、礼品客户、情绪陪伴赛道客户、IP 联名客户。
+          </div>
+          <div class="field">
+            <b>日本市场适配</b>
+            独居、高龄、租房不能养宠等场景都能讲通，但购买决策更依赖情绪价值而非硬件参数。
+          </div>
+          <div class="field">
+            <b>可信度</b>
+            中高。多家 CES 公开媒体可验证，但完整零售页、价格体系与量产节奏仍不充分。
+          </div>
+          <div class="field wide">
+            <b>供应链判断</b>
+            不建议今天直接找整机仿制。更适合延展成 AI 毛绒陪伴玩具、桌宠、服饰配件、收纳窝和互动周边。
+          </div>
+          <div class="field wide">
+            <b>风险点 + 产品级下一步建议</b>
+            情绪陪伴类产品容易首波火、后续疲软。先观察日本市场内容反馈，再找智能玩具工厂验证日语语音、触摸反馈和低成本动作方案。
+          </div>
+        </div>
+        <div class="decision">
+          <b>当前阶段：</b>只是市场热度。趋势有价值，但更适合作为“陪伴型玩具与周边”的方向雷达，而不是今天就追高复杂整机。
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="assets/2026-06-13/real/ultramarine-official-1.png" alt="Ultramarine P1 侧视图">
+          <img src="assets/2026-06-13/real/ultramarine-official-2.png" alt="Ultramarine P1 正视图">
+          <img src="assets/2026-06-13/real/ultramarine-official-3.png" alt="Ultramarine P1 斜侧图">
+          <img src="assets/2026-06-13/real/ultramarine-official-4.png" alt="Ultramarine P1 机身图">
+        </div>
+        <p class="caption">图片来源：ECOVACS 官方产品页。用于展示机身外观、滚刷结构、侧面履带与整体比例。</p>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>ECOVACS Ultramarine P1 泳池清洁机器人</h2>
+            <div class="source-line">
+              <a href="https://www.t3.com/home-living/garden/ive-been-waiting-months-for-ecovacs-first-ever-robot-pool-cleaner-and-its-finally-here">T3</a> /
+              <a href="https://cadenaser.com/nacional/2026/02/10/los-robots-de-ecovacs-salen-de-casa-ahora-tambien-solucionan-los-problemas-del-jardin-y-de-la-piscina-cadena-ser/">Cadena SER</a> /
+              <a href="https://www.huffingtonpost.es/tecnologia/ecovacs-regresa-espana-mas-robot-debajo-brazo-lanza-nuevos-dispositivos-toda-casa-f202602.html">HuffPost ES</a>
+            </div>
+          </div>
+          <a class="source-button" href="https://www.t3.com/home-living/garden/ive-been-waiting-months-for-ecovacs-first-ever-robot-pool-cleaner-and-its-finally-here">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">户外用品</span>
+          <span class="tag blue">高客单</span>
+          <span class="tag">自动化维护</span>
+          <span class="tag warn">偏项目制</span>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <b>核心卖点</b>
+            4800GPH 吸力，地面、墙面、斜坡一体清洁，走“高维护成本场景自动化”路线。
+          </div>
+          <div class="field">
+            <b>适合客户</b>
+            户外园艺客户、别墅渠道、跨境高客单卖家、海外物业用品客户。
+          </div>
+          <div class="field">
+            <b>日本市场适配</b>
+            日本本地泳池不算大众盘，更适合作为海外市场项目线索或高端物业渠道机会。
+          </div>
+          <div class="field">
+            <b>可信度</b>
+            中高。公开媒体对功能、售价和区域上市描述较一致，公开可验证程度高。
+          </div>
+          <div class="field wide">
+            <b>供应链判断</b>
+            可进入供应链验证，但优先看滤网耗材、收纳车、维护工具包、防晒罩、防缠绕升级件，不先碰低价整机替代。
+          </div>
+          <div class="field wide">
+            <b>风险点 + 产品级下一步建议</b>
+            售后、防水、电池和耐腐蚀要求高。先找泳池维护类工厂和配件厂，验证耗材与配套包，再决定是否往整机项目推进。
+          </div>
+        </div>
+        <div class="decision">
+          <b>当前阶段：</b>可进入供应链验证。它不是泛大众日销品，而是面向高客单物业、庭院、度假渠道的项目制机会。
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="assets/2026-06-13/real/silkipro-real-1.jpg" alt="Shark SilkiPro 使用前后与主机图">
+          <img src="assets/2026-06-13/real/silkipro-real-2.jpg" alt="Shark SilkiPro 主机与梳齿配件图">
+          <img src="assets/2026-06-13/real/silkipro-real-3.jpg" alt="Shark SilkiPro 造型前后对比图">
+          <img src="assets/2026-06-13/real/silkipro-real-4.jpg" alt="Shark SilkiPro 直发效果图">
+        </div>
+        <p class="caption">图片来源：TechRadar / Woman &amp; Home 评测实拍。用于展示主机外观、梳齿附件、操作面板与使用前后效果。</p>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Shark SilkiPro Straight 湿发直发一体造型器</h2>
+            <div class="source-line">
+              <a href="https://www.techradar.com/home/hair-care/shark-silkipro-straight-review">TechRadar</a> /
+              <a href="https://www.womanandhome.com/beauty/hair/shark-silkipro-straight-review/">Woman &amp; Home</a> /
+              <a href="https://as.com/tikitakas/asi-es-la-tecnologia-wet-to-dry-para-no-elegir-entre-resultados-el-tiempo-y-salud-de-su-cabello-f202606-n/">AS</a>
+            </div>
+          </div>
+          <a class="source-button" href="https://www.techradar.com/home/hair-care/shark-silkipro-straight-review">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">美容个护</span>
+          <span class="tag blue">美发电器</span>
+          <span class="tag blue">高溢价</span>
+          <span class="tag">日本适配</span>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <b>核心卖点</b>
+            湿发到干发再到顺直一步完成，附带梳齿件，更照顾卷发、粗硬发、毛躁发场景。
+          </div>
+          <div class="field">
+            <b>适合客户</b>
+            美容个护客户、日本电商卖家、小家电客户、OEM 美发工具客户。
+          </div>
+          <div class="field">
+            <b>日本市场适配</b>
+            “减少步骤、减少热损伤、提升光泽感”是日本高客单美发工具的长期有效卖点。
+          </div>
+          <div class="field">
+            <b>可信度</b>
+            高。多个公开评测已给出价格、附件、操作体验和发质适配反馈。
+          </div>
+          <div class="field wide">
+            <b>供应链判断</b>
+            值得联系工厂。可以拆成风道、陶瓷板、梳齿附件、温控感应、收纳包、旅行版和亚洲发质版。
+          </div>
+          <div class="field wide">
+            <b>风险点 + 产品级下一步建议</b>
+            只做普通直发夹仿款没有意义。先找成熟美发电器厂验证重量、噪声、夹发拉扯、安全温控和卷发友好型附件。
+          </div>
+        </div>
+        <div class="decision">
+          <b>当前阶段：</b>值得联系工厂。它更像“高客单功能升级型美发工具”，适合走参数差异、附件差异和内容种草路线。
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="assets/2026-06-13/real/crispi-real-1.jpg" alt="Ninja Crispi Pro 炸鸡翅与薯条场景">
+          <img src="assets/2026-06-13/real/crispi-real-5.jpg" alt="Ninja Crispi Pro 控制面板近景图">
+          <img src="assets/2026-06-13/real/crispi-real-3.jpg" alt="Ninja Crispi Pro 包装图">
+          <img src="assets/2026-06-13/real/crispi-real-4.jpg" alt="Ninja Crispi Pro 主机近景图">
+        </div>
+        <p class="caption">图片来源：Tom's Guide 评测实拍。用于展示主机本体、玻璃容器、料理成品与包装形态。</p>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Ninja Crispi Pro 玻璃容器式空气炸系统</h2>
+            <div class="source-line">
+              <a href="https://www.tomsguide.com/home/air-fryers/ninja-crispi-pro-review">Tom's Guide</a> /
+              <a href="https://www.foodandwine.com/ninja-crispi-pro-air-fryer-launch-11831468">Food &amp; Wine</a> /
+              <a href="https://www.techradar.com/home/air-fryers/ninjas-glass-air-fryer-now-comes-in-an-xl-size-and-four-pretty-colors-which-one-will-you-choose">TechRadar</a>
+            </div>
+          </div>
+          <a class="source-button" href="https://www.tomsguide.com/home/air-fryers/ninja-crispi-pro-review">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">厨房用品</span>
+          <span class="tag blue">小家电</span>
+          <span class="tag blue">套装机会</span>
+          <span class="tag">家居杂货延展</span>
+        </div>
+        <div class="grid">
+          <div class="field">
+            <b>核心卖点</b>
+            玻璃容器可备餐、可冷藏、可上桌、可空气炸，把小家电卖成“料理容器系统”。
+          </div>
+          <div class="field">
+            <b>适合客户</b>
+            日本电商卖家、家居杂货客户、厨房用品客户、小家电客户。
+          </div>
+          <div class="field">
+            <b>日本市场适配</b>
+            可视化烹饪、桌面美观、少量分餐和收纳效率都更适合日本家庭叙事。
+          </div>
+          <div class="field">
+            <b>可信度</b>
+            高。容量、模式、颜色、使用场景、价格都有多家公开媒体佐证。
+          </div>
+          <div class="field wide">
+            <b>供应链判断</b>
+            值得联系工厂。整机之外，还能拆玻璃烤盒、密封盖、底托、分隔器、硅胶件和食谱套装。
+          </div>
+          <div class="field wide">
+            <b>风险点 + 产品级下一步建议</b>
+            玻璃耐热、跌落破损、密封和加热效率都会直接影响口碑。先做 1-2 人份、可叠放、低占位版本，再看整机机会。
+          </div>
+        </div>
+        <div class="decision">
+          <b>当前阶段：</b>值得联系工厂。厨房电器正在从“单功能机器”转向“备餐容器系统”，这条线同时能打电器客户和家居杂货客户。
+        </div>
+      </div>
+    </article>
+
+    <section class="source-list">
+      <b>主要来源：</b>
+      <a href="https://www.sharkninja.com/shark-blastboss-indoor-outdoor-air-blasting-system-charcoal/AB2111.html">SharkNinja 官方页</a>；
+      <a href="https://www.theverge.com/tech/902550/shark-blastboss-blower-adjustable-broom-accessory-price-availability">The Verge - BlastBoss</a>；
+      <a href="https://www.tomsguide.com/home/shark-launched-an-air-blaster-that-works-both-indoors-and-out-and-ill-be-first-in-line-to-try-it">Tom's Guide - BlastBoss</a>；
+      <a href="https://www.techradar.com/home/smart-home/ecovacs-new-launch-nearly-made-me-cry-during-my-ces-booth-tour">TechRadar - LilMilo</a>；
+      <a href="https://www.tomsguide.com/home/smart-home/forget-robot-vacuums-ecovacs-most-exciting-product-at-ces-2026-was-its-upcoming-ai-powered-pet-companion">Tom's Guide - LilMilo</a>；
+      <a href="https://www.t3.com/home-living/garden/ive-been-waiting-months-for-ecovacs-first-ever-robot-pool-cleaner-and-its-finally-here">T3 - Ultramarine P1</a>；
+      <a href="https://www.techradar.com/home/hair-care/shark-silkipro-straight-review">TechRadar - SilkiPro Straight</a>；
+      <a href="https://www.womanandhome.com/beauty/hair/shark-silkipro-straight-review/">Woman &amp; Home - SilkiPro Straight</a>；
+      <a href="https://www.tomsguide.com/home/air-fryers/ninja-crispi-pro-review">Tom's Guide - Ninja Crispi Pro</a>；
+      <a href="https://www.foodandwine.com/ninja-crispi-pro-air-fryer-launch-11831468">Food &amp; Wine - Ninja Crispi Pro</a>。
+      中文平台方面，今天已主动尝试公开检索微信公众号、小红书、抖音线索，但多数结果需登录或仅剩索引摘要，公开可验证度不足，因此未写入主卡判断。
+    </section>
+  </main>
+</body>
+</html>

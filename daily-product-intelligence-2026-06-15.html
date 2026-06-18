@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日新颖消费品情报报告 - 2026-06-15</title>
+  <style>
+    :root {
+      --ink: #162027;
+      --muted: #66757f;
+      --line: #d9e3e8;
+      --soft: #f4f8fa;
+      --paper: #ffffff;
+      --accent: #0f766e;
+      --accent-2: #1d4ed8;
+      --good: #166534;
+      --warn: #b45309;
+      --risk: #9a3412;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e8eef2;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.55;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 20px auto;
+      padding: 18mm 16mm;
+      background: var(--paper);
+      box-shadow: 0 16px 48px rgba(22, 32, 39, 0.16);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 32px;
+      line-height: 1.12;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta {
+      align-self: end;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #f7fbfc 0%, #eef6f8 100%);
+      font-size: 12px;
+    }
+
+    .meta strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+
+    .summary-card {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      background: #fbfdfe;
+    }
+
+    .summary-card b {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .summary-card span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 18px 0 12px;
+      font-size: 18px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 20px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 44% 56%;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 172px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .gallery.two img {
+      height: 220px;
+    }
+
+    .gallery.three .wide {
+      grid-column: span 2;
+      height: 200px;
+    }
+
+    .caption {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: 10.5px;
+    }
+
+    .product-title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 21px;
+      line-height: 1.22;
+    }
+
+    .title-links {
+      margin: 5px 0 8px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .title-links a, .source-list a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    .source-button {
+      flex: 0 0 auto;
+      display: inline-block;
+      padding: 5px 9px;
+      border: 1px solid #bdd2f4;
+      border-radius: 999px;
+      background: #edf4ff;
+      color: var(--accent-2);
+      font-size: 11px;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e7f5f2;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .tag.blue { background: #e8f0ff; color: var(--accent-2); }
+    .tag.good { background: #ebf8ef; color: var(--good); }
+    .tag.warn { background: #fff4e8; color: var(--warn); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .field {
+      padding: 8px;
+      border: 1px solid #ecf1f4;
+      background: var(--soft);
+      font-size: 12px;
+    }
+
+    .field strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .field.full { grid-column: span 2; }
+
+    .field.conclusion {
+      background: #eef8f3;
+      border-color: #d4eadc;
+    }
+
+    .field.risk {
+      background: #fff7f0;
+      border-color: #f1dcc7;
+    }
+
+    .source-list {
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #fbfdfe;
+      font-size: 12px;
+    }
+
+    .source-list p {
+      margin: 0 0 8px;
+    }
+
+    .source-list ul {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .source-list li {
+      margin-bottom: 6px;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <p class="eyebrow">Daily Product Intelligence</p>
+        <h1>每日新颖消费品情报报告</h1>
+        <p class="subtitle">今日筛选 6 个公开可验证新品机会，覆盖厨房小家电、宠物用品、户外园艺与美容个护。判断重点放在日本市场适配度、可找厂性和可改良空间。</p>
+      </div>
+      <div class="meta">
+        <strong>报告日期：2026-06-15</strong>
+        制作人：供应链部门
+      </div>
+    </header>
+
+    <section class="summary">
+      <article class="summary-card">
+        <b>结论 1</b>
+        <span>今日最强供应链机会集中在“带 AI 监测的宠物硬件”和“功能被重新定义的小家电”，不是纯低价替代款。</span>
+      </article>
+      <article class="summary-card">
+        <b>结论 2</b>
+        <span>宠物饮水与喂食两条线都出现“摄像头 + 数据提醒 + 耗材弱化”趋势，更适合做高客单 OEM 升级。</span>
+      </article>
+      <article class="summary-card">
+        <b>结论 3</b>
+        <span>已尝试补充中文公开搜索线索；今日最终保留的样本全部来自公开可打开页面，未纳入受限社媒截图，避免误判。</span>
+      </article>
+    </section>
+
+    <h3 class="section-title">产品机会卡片</h3>
+
+    <section class="product">
+      <div>
+        <div class="gallery three">
+          <img class="wide" src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/03/Nosh-Side-View.png?crop=8.8309600367478%2C0%2C82.338079926504%2C100&quality=90&strip=all&w=2400" alt="Nosh One 外观">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2026/03/Nosh-Internal-View.png?crop=0%2C0.14749262536873%2C100%2C99.705014749263&quality=90&strip=all&w=2400" alt="Nosh One 结构">
+          <img src="https://assets.newatlas.com/dims4/default/3143810/2147483647/strip/true/crop/2000x1333+0+0/resize/1200x800!/format/webp/quality/90/?url=https%3A%2F%2Fassets.newatlas.com%2Fdims4%2Fdefault%2Fb8f01b9%2F2147483647%2Fstrip%2Ftrue%2Fcrop%2F2000x1333%2B0%2B0%2Fresize%2F2000x1333%21%2Fformat%2Fwebp%2Fquality%2F90%2F%3Furl%3Dhttps%253A%252F%252Fnewatlas-brightspot.s3.amazonaws.com%252F4d%252F30%252F6f699ae847f8a8e98b3f15b33224%252Fnosh-one-kitchen-robot-chef.jpg" alt="Nosh One 使用形态">
+        </div>
+        <div class="caption">公开图片来自 Kickstarter 公开项目页与科技媒体报道。当前可验证图片 3 张。</div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Nosh One AI 自动烹饪机器人</h2>
+            <div class="title-links">原页面：<a href="https://www.kickstarter.com/projects/nosh-robotics/nosh-one-ai-powered-automated-cooking-system?ref=section-homepage-projectcollection-2-staff-picks-category-tech">Kickstarter 项目页</a> ｜ 发现来源：<a href="https://www.theverge.com/tech/892655/nosh-robotics-nosh-one-launch">The Verge</a></div>
+          </div>
+          <a class="source-button" href="https://www.kickstarter.com/projects/nosh-robotics/nosh-one-ai-powered-automated-cooking-system?ref=section-homepage-projectcollection-2-staff-picks-category-tech">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">厨房小家电</span>
+          <span class="tag blue">众筹新品</span>
+          <span class="tag good">可做高端 OEM 方向</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>来源类型</strong>全球众筹 / 行业媒体</div>
+          <div class="field"><strong>适合客户</strong>日本电商卖家 / 小家电 OEM 客户</div>
+          <div class="field"><strong>核心卖点</strong>自动投料、封闭烹饪、App 食谱逻辑，解决“做饭太复杂”。</div>
+          <div class="field"><strong>日本市场适配</strong>单身户与双职工家庭有需求，但体积、菜谱本地化与清洗便利性必须先验证。</div>
+          <div class="field"><strong>供应链判断</strong>整机门槛高，但“自动搅拌锅 + 预制酱包 + App 菜谱”可拆成更容易落地的 OEM 路线。</div>
+          <div class="field"><strong>可信度判断</strong>中高。Kickstarter + 主流媒体公开报道，量产稳定性仍待交付验证。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。公开项目页、结构图、媒体图均可打开。</div>
+          <div class="field"><strong>当前阶段判断</strong>可进入供应链验证。</div>
+          <div class="field risk full"><strong>风险点</strong>成本高、售后重、加热安全标准复杂，日本菜谱适配若不到位，复购驱动会弱。</div>
+          <div class="field conclusion full"><strong>产品级下一步建议</strong>先拆成“自动翻炒/炖煮底座 + 可替换料理杯 + 日式菜单包”三层方案，优先找具备 IH / 电热锅经验工厂摸底。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product">
+      <div>
+        <div class="gallery two">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2024/12/birdfy-bath-pro-angle.jpg?quality=90&strip=all&crop=0,0.0080933014230272,100,99.983813397154&w=2400" alt="Birdfy Bath Pro 外观">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2024/12/birdfy-bath-pro-wide-birds.jpg?quality=90&strip=all&crop=0,0.0019685039370079,100,99.996062992126&w=2400" alt="Birdfy Bath Pro 使用场景">
+        </div>
+        <div class="caption">公开图片 2 张。Birdfy 官方页可追溯，画面已足够说明外观与真实使用场景。</div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Birdfy Bath Pro 智能观鸟浴盆</h2>
+            <div class="title-links">原页面：<a href="https://www.birdfy.com/products/birdfy-bath-pro">Birdfy 官方页</a> ｜ 发现来源：<a href="https://www.theverge.com/2025/1/6/24337091/birdfy-bath-pro-smart-bird-camera-wi-fi-ai-identification">The Verge</a> / <a href="https://www.techradar.com/cameras/birdfy-bird-bath-pro-review">TechRadar</a></div>
+          </div>
+          <a class="source-button" href="https://www.birdfy.com/products/birdfy-bath-pro">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">户外园艺</span>
+          <span class="tag blue">智能庭院</span>
+          <span class="tag good">高毛利配件线</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>来源类型</strong>官方页 / 行业媒体</div>
+          <div class="field"><strong>适合客户</strong>户外园艺客户 / 家居杂货客户 / 日本电商卖家</div>
+          <div class="field"><strong>核心卖点</strong>观鸟 + 喷泉 + AI 识别三合一，把普通庭院鸟浴升级成内容型硬件。</div>
+          <div class="field"><strong>日本市场适配</strong>适合庭院、阳台观鸟与赠礼场景，日本园艺和自然观察客群较匹配。</div>
+          <div class="field"><strong>供应链判断</strong>整机可拆成“太阳能喷泉 + 防水摄像头 + 庭院底座”模块，存在组合 OEM 空间。</div>
+          <div class="field"><strong>可信度判断</strong>中高。已公开售卖并有后续评测，但持续活跃度更偏内容驱动。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。官方页与两家媒体公开可开。</div>
+          <div class="field"><strong>当前阶段判断</strong>值得联系工厂。</div>
+          <div class="field risk full"><strong>风险点</strong>日本市场客群偏细分；冬季环境、室外耐候与售后防水投诉要提前评估。</div>
+          <div class="field conclusion full"><strong>产品级下一步建议</strong>优先找“太阳能喷泉 + 户外安防摄像头 + 花园塑胶件”跨品类工厂，先做不带 AI 订阅的轻量版样机。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product">
+      <div>
+        <div class="gallery two">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/petkit_wet_feeder1.png?quality=90&strip=all&crop=0,2.119460501574,100,95.761078996852" alt="YumShare Daily Feast 外观">
+          <img src="https://platform.theverge.com/wp-content/uploads/sites/2/2025/12/petkit_wet_feeder2.png?quality=90&strip=all&crop=0,2.6470588235294,100,94.705882352941&w=2400" alt="YumShare Daily Feast 细节">
+        </div>
+        <div class="caption">公开图片 2 张。当前以媒体公开图为主，足够确认结构方向；如进入推进，需二次补官方开箱图。</div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>PETKIT YumShare Daily Feast 湿粮自动喂食器</h2>
+            <div class="title-links">原页面：<a href="https://petkit.com/products/yumshare-daily-feast">PETKIT 产品页</a> ｜ 发现来源：<a href="https://www.theverge.com/news/850992/petkit-ai-camera-yumshare-daily-feast-automatic-wet-food-feeder-eversweet-ultra-fountain">The Verge</a></div>
+          </div>
+          <a class="source-button" href="https://petkit.com/products/yumshare-daily-feast">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">宠物用品</span>
+          <span class="tag blue">智能喂食</span>
+          <span class="tag warn">官方图待补全</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>来源类型</strong>行业媒体 / 官方产品页</div>
+          <div class="field"><strong>适合客户</strong>宠物用品客户 / 日本电商卖家 / OEM 客户</div>
+          <div class="field"><strong>核心卖点</strong>把“湿粮定时喂食”做成自动化，是干粮机的升级版本，解决上班族喂食痛点。</div>
+          <div class="field"><strong>日本市场适配</strong>日本猫犬家庭密度高，湿粮与鲜食接受度高，适合高客单宠物电器线。</div>
+          <div class="field"><strong>供应链判断</strong>核心难点在冷藏、密封和清洗便利；但该方向很适合做中高端 ODM 细分。</div>
+          <div class="field"><strong>可信度判断</strong>中。品牌可信，但市场端仍在新品教育期。</div>
+          <div class="field"><strong>公开可验证程度</strong>中高。官方页可追，公开图目前不算多。</div>
+          <div class="field"><strong>当前阶段判断</strong>可进入供应链验证。</div>
+          <div class="field risk full"><strong>风险点</strong>食品安全、冷藏模块寿命、异味残留、清洁门槛，都会直接影响差评率。</div>
+          <div class="field conclusion full"><strong>产品级下一步建议</strong>先找宠物喂食器和迷你制冷模块工厂联合评估，优先验证“可拆洗 + 低噪声 + 断电保护”三项。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product">
+      <div>
+        <div class="gallery">
+          <img src="https://petkit.com/cdn/shop/files/eversweet-ultra-main-2yr-warranty.jpg?v=1778492672&width=1500" alt="EverSweet Ultra 主图">
+          <img src="https://petkit.com/cdn/shop/files/eversweet-ultra-ai-camera-monitoring.jpg?v=1778315957&width=1500" alt="EverSweet Ultra AI 监测">
+          <img src="https://petkit.com/cdn/shop/files/eversweet-ultra-box-contents.jpg?v=1778316016&width=1500" alt="EverSweet Ultra 包装内容">
+          <img src="https://petkit.com/cdn/shop/files/eversweet-ultra-oneway-mechanism-pc.png?format=pjpg&v=1778316804&width=2400" alt="EverSweet Ultra 水路结构">
+        </div>
+        <div class="caption">公开图片 4 张完整。包含外观、AI 监测、包装与关键结构，适合直接作为客户初筛素材。</div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>PETKIT EverSweet Ultra AI 宠物饮水机</h2>
+            <div class="title-links">原页面：<a href="https://petkit.com/products/eversweet-ultra-with-camera-pet-water-fountain">PETKIT 官方页</a> ｜ 发现来源：<a href="https://www.theverge.com/news/850992/petkit-ai-camera-yumshare-daily-feast-automatic-wet-food-feeder-eversweet-ultra-fountain">The Verge</a></div>
+          </div>
+          <a class="source-button" href="https://petkit.com/products/eversweet-ultra-with-camera-pet-water-fountain">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">宠物用品</span>
+          <span class="tag blue">饮水健康</span>
+          <span class="tag good">OEM 潜力高</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>来源类型</strong>官方页 / 行业媒体</div>
+          <div class="field"><strong>适合客户</strong>宠物用品客户 / 日本电商卖家 / 贴牌客户</div>
+          <div class="field"><strong>核心卖点</strong>把“滤芯饮水机”升级成“分离净水箱 + AI 饮水监测 + 自动冲洗”。</div>
+          <div class="field"><strong>日本市场适配</strong>非常适合日本精细化养宠人群，卖点清晰，且能讲健康监测故事。</div>
+          <div class="field"><strong>供应链判断</strong>最值得跟进。结构创新点明确，可围绕水路、摄像头、App 提醒做不同层级方案。</div>
+          <div class="field"><strong>可信度判断</strong>高。官方页信息完整，价格、出货节奏、包装内容都可验证。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。</div>
+          <div class="field"><strong>当前阶段判断</strong>值得联系工厂。</div>
+          <div class="field risk full"><strong>风险点</strong>成本较高，AI 摄像头带来隐私与 App 维护要求；若做简化版，要保留最核心的“分离式洁净感”。</div>
+          <div class="field conclusion full"><strong>产品级下一步建议</strong>先做两版路线：A 版保留 AI 摄像头做旗舰；B 版去摄像头只保留分离水路与自动冲洗，测试日本中高端价格带。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product">
+      <div>
+        <div class="gallery three">
+          <img class="wide" src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:386,cw:1133,ch:566,q:80,w:1133/2rFQp6c2QoRzh9FC7aQi2H.jpg" alt="L'Oreal Light Straight 主图">
+          <img src="https://cdn.mos.cms.futurecdn.net/v2/t:0,l:184,cw:1520,ch:760,q:80,w:1520/ZhQw4ywPwAAsS9HYH7FEUa.jpg" alt="L'Oreal Light Straight 结构">
+          <img src="https://cdn.mos.cms.futurecdn.net/8xLm8BboDfCQaExPnRKKiA.jpg" alt="L'Oreal 美容硬件 CES 展示">
+        </div>
+        <div class="caption">公开图片 3 张。Light Straight 已有结构展示，面向 OEM 判断已足够。</div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>L'Oréal Light Straight 光热直发造型器</h2>
+            <div class="title-links">公开原页面：<a href="https://www.tomsguide.com/home/loreal-debuts-light-based-hair-straightener-and-led-face-mask-at-ces-2026">Tom's Guide CES 报道</a> ｜ 补充来源：<a href="https://www.techradar.com/tech-events/i-just-saw-loreals-ultra-flexible-silicone-led-mask-and-its-about-to-seriously-shake-up-the-beauty-market">TechRadar</a></div>
+          </div>
+          <a class="source-button" href="https://www.tomsguide.com/home/loreal-debuts-light-based-hair-straightener-and-led-face-mask-at-ces-2026">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">美容个护</span>
+          <span class="tag blue">CES 新品</span>
+          <span class="tag good">概念可拆解</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>来源类型</strong>行业媒体 / 展会公开报道</div>
+          <div class="field"><strong>适合客户</strong>美容个护客户 / OEM 客户 / 日本电商卖家</div>
+          <div class="field"><strong>核心卖点</strong>强调“更低热损伤的快速造型”，把光能叙事引入传统直发器赛道。</div>
+          <div class="field"><strong>日本市场适配</strong>日本女性个护市场愿意为低损伤、轻量便携和沙龙感买单，故事性强。</div>
+          <div class="field"><strong>供应链判断</strong>大牌原型难复制，但“更均匀发热 + 造型路径可视化 + 轻量化外观”可做功能模仿升级。</div>
+          <div class="field"><strong>可信度判断</strong>中。品牌权威强，但目前仍以展会公开信息为主。</div>
+          <div class="field"><strong>公开可验证程度</strong>中高。公开图和媒体描述完整，官方独立消费页未见上线。</div>
+          <div class="field"><strong>当前阶段判断</strong>只是市场热度。</div>
+          <div class="field risk full"><strong>风险点</strong>专利与概念营销壁垒高；若只做外观跟随，容易变回普通直发器同质化。</div>
+          <div class="field conclusion full"><strong>产品级下一步建议</strong>先调研日本现有“护发直发器”价格带，再做可落地版定义：轻量、低温高效、旅行收纳套装，而不是直接追大牌概念词。</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="product">
+      <div>
+        <div class="gallery two">
+          <img src="https://cdn.mos.cms.futurecdn.net/8xLm8BboDfCQaExPnRKKiA.jpg" alt="L'Oreal LED 面罩正面">
+          <img src="https://cdn.mos.cms.futurecdn.net/8cmFfRNSexkCM9pAYm4Jk4.jpg" alt="L'Oreal LED 面罩佩戴场景">
+        </div>
+        <div class="caption">公开图片 2 张。两张都能说明面罩柔性材质与佩戴形态。</div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>L'Oréal 柔性硅胶 LED 面罩</h2>
+            <div class="title-links">公开原页面：<a href="https://www.techradar.com/tech-events/i-just-saw-loreals-ultra-flexible-silicone-led-mask-and-its-about-to-seriously-shake-up-the-beauty-market">TechRadar CES 报道</a> ｜ 补充来源：<a href="https://www.tomsguide.com/home/loreal-debuts-light-based-hair-straightener-and-led-face-mask-at-ces-2026">Tom's Guide</a></div>
+          </div>
+          <a class="source-button" href="https://www.techradar.com/tech-events/i-just-saw-loreals-ultra-flexible-silicone-led-mask-and-its-about-to-seriously-shake-up-the-beauty-market">查看原页面</a>
+        </div>
+        <div class="tags">
+          <span class="tag">美容个护</span>
+          <span class="tag blue">家用美容仪</span>
+          <span class="tag warn">法规先行</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>来源类型</strong>行业媒体 / 展会公开报道</div>
+          <div class="field"><strong>适合客户</strong>美容个护客户 / 日本电商卖家</div>
+          <div class="field"><strong>核心卖点</strong>把 LED 护肤面罩做得更轻、更贴脸，提升长期佩戴舒适度。</div>
+          <div class="field"><strong>日本市场适配</strong>日本家用美容仪市场成熟，若强调轻量和舒适，具备切入理由。</div>
+          <div class="field"><strong>供应链判断</strong>柔性硅胶面罩 + LED 阵列 + 低刺激佩戴体验，是可拆解的 ODM 机会。</div>
+          <div class="field"><strong>可信度判断</strong>中。趋势明确，但量产参数、疗效证据与上市节奏仍需继续追。</div>
+          <div class="field"><strong>公开可验证程度</strong>中高。公开视频和媒体图可开，独立参数页暂缺。</div>
+          <div class="field"><strong>当前阶段判断</strong>可进入供应链验证。</div>
+          <div class="field risk full"><strong>风险点</strong>日本法规、功效宣称、皮肤安全测试和售后责任都比普通个护电器更重。</div>
+          <div class="field conclusion full"><strong>产品级下一步建议</strong>优先联系已有 LED 美容仪出口经验工厂，先做“舒适佩戴升级版”而非重医疗宣称版本，规避一开始就走高监管路线。</div>
+        </div>
+      </div>
+    </section>
+
+    <h3 class="section-title">来源链接</h3>
+    <section class="source-list">
+      <p>今日选品以公开可打开页面为准，全部链接可直接复核。</p>
+      <ul>
+        <li>Nosh One：<a href="https://www.kickstarter.com/projects/nosh-robotics/nosh-one-ai-powered-automated-cooking-system?ref=section-homepage-projectcollection-2-staff-picks-category-tech">Kickstarter 原页面</a> ｜ <a href="https://www.theverge.com/tech/892655/nosh-robotics-nosh-one-launch">The Verge 发现来源</a> ｜ <a href="https://newatlas.com/around-the-home/nosh-one-kitchen-robot/">New Atlas 补充图片</a></li>
+        <li>Birdfy Bath Pro：<a href="https://www.birdfy.com/products/birdfy-bath-pro">Birdfy 官方页</a> ｜ <a href="https://www.theverge.com/2025/1/6/24337091/birdfy-bath-pro-smart-bird-camera-wi-fi-ai-identification">The Verge</a> ｜ <a href="https://www.techradar.com/cameras/birdfy-bird-bath-pro-review">TechRadar</a></li>
+        <li>PETKIT YumShare Daily Feast：<a href="https://petkit.com/products/yumshare-daily-feast">PETKIT 产品页</a> ｜ <a href="https://www.theverge.com/news/850992/petkit-ai-camera-yumshare-daily-feast-automatic-wet-food-feeder-eversweet-ultra-fountain">The Verge</a></li>
+        <li>PETKIT EverSweet Ultra：<a href="https://petkit.com/products/eversweet-ultra-with-camera-pet-water-fountain">PETKIT 官方页</a> ｜ <a href="https://www.theverge.com/news/850992/petkit-ai-camera-yumshare-daily-feast-automatic-wet-food-feeder-eversweet-ultra-fountain">The Verge</a></li>
+        <li>L'Oréal Light Straight：<a href="https://www.tomsguide.com/home/loreal-debuts-light-based-hair-straightener-and-led-face-mask-at-ces-2026">Tom's Guide CES 报道</a></li>
+        <li>L'Oréal 柔性硅胶 LED 面罩：<a href="https://www.techradar.com/tech-events/i-just-saw-loreals-ultra-flexible-silicone-led-mask-and-its-about-to-seriously-shake-up-the-beauty-market">TechRadar CES 报道</a> ｜ <a href="https://www.tomsguide.com/home/loreal-debuts-light-based-hair-straightener-and-led-face-mask-at-ces-2026">Tom's Guide</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

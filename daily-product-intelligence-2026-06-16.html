@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>每日新颖消费品情报报告 - 2026-06-16</title>
+  <style>
+    :root {
+      --ink: #17242b;
+      --muted: #61727b;
+      --line: #d8e4e8;
+      --soft: #f4f8fa;
+      --paper: #ffffff;
+      --accent: #0d766d;
+      --accent-2: #1d4ed8;
+      --good: #166534;
+      --warn: #b45309;
+      --risk: #9a3412;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #e7edf0;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--accent-2);
+      text-decoration: none;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 18px auto;
+      padding: 17mm 15mm;
+      background: var(--paper);
+      box-shadow: 0 16px 42px rgba(23, 36, 43, 0.14);
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: 1.45fr 0.55fr;
+      gap: 16px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 31px;
+      line-height: 1.1;
+    }
+
+    .subtitle {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .meta {
+      align-self: end;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #f7fbfc 0%, #edf5f7 100%);
+      font-size: 12px;
+    }
+
+    .meta strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 18px 0 22px;
+    }
+
+    .summary-card {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      background: #fbfdfe;
+    }
+
+    .summary-card b {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 13px;
+    }
+
+    .summary-card span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 18px 0 12px;
+      font-size: 18px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 6px;
+      height: 20px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .product {
+      display: grid;
+      grid-template-columns: 43% 57%;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      break-inside: avoid;
+      page-break-inside: avoid;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      align-content: start;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 166px;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      background: var(--soft);
+    }
+
+    .gallery.two img {
+      height: 214px;
+    }
+
+    .gallery.three .wide {
+      grid-column: span 2;
+      height: 188px;
+    }
+
+    .product-title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      line-height: 1.22;
+    }
+
+    .source-button {
+      flex: 0 0 auto;
+      display: inline-block;
+      padding: 5px 9px;
+      border: 1px solid #bdd2f4;
+      border-radius: 999px;
+      background: #edf4ff;
+      color: var(--accent-2);
+      font-size: 11px;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .title-links {
+      margin: 5px 0 9px;
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 10px;
+    }
+
+    .tag {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #e7f5f2;
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .tag.blue { background: #e8f0ff; color: var(--accent-2); }
+    .tag.good { background: #ebf8ef; color: var(--good); }
+    .tag.warn { background: #fff4e8; color: var(--warn); }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .field {
+      padding: 8px;
+      border: 1px solid #ecf1f4;
+      background: var(--soft);
+      font-size: 12px;
+    }
+
+    .field strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .field.full {
+      grid-column: span 2;
+    }
+
+    .source-list {
+      padding: 12px 14px;
+      border: 1px solid var(--line);
+      background: #fbfdfe;
+      font-size: 12px;
+    }
+
+    .source-list ol {
+      margin: 0;
+      padding-left: 18px;
+    }
+
+    .source-list li + li {
+      margin-top: 6px;
+    }
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div>
+        <p class="eyebrow">Daily Product Intelligence</p>
+        <h1>每日新颖消费品情报报告</h1>
+        <p class="subtitle">聚焦日本市场热度、可找厂难度、改良空间与公开可验证程度，优先筛选能转成 OEM/ODM 机会的消费品方向。</p>
+      </div>
+      <aside class="meta">
+        <strong>报告信息</strong>
+        报告日期：2026-06-16<br>
+        制作人：供应链部门
+      </aside>
+    </header>
+
+    <section class="summary">
+      <div class="summary-card">
+        <b>结论 1</b>
+        <span>今天最强信号集中在“情绪价值家居”“微创新美容护理”“高温/户外场景刚需”三条线上。</span>
+      </div>
+      <div class="summary-card">
+        <b>结论 2</b>
+        <span>可立即切入供应链验证的，是家具结构改良、个护安瓶包装、车品隔热材料、工作场景穿戴传感器。</span>
+      </div>
+      <div class="summary-card">
+        <b>结论 3</b>
+        <span>AI 宠物陪伴与泳池机器人热度高，但更适合作为中高端客户趋势观察，不宜直接走低价跟款。</span>
+      </div>
+    </section>
+
+    <h3 class="section-title">产品机会卡片</h3>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="https://yetch.studio/cdn/shop/files/LAUNDRT_-3906.jpg?v=1771022573&width=1946" alt="Laundry Chair 主图">
+          <img src="https://yetch.studio/cdn/shop/files/LAUNDRT_-3920.jpg?v=1771022573&width=1946" alt="Laundry Chair 结构图">
+          <img src="https://yetch.studio/cdn/shop/files/laura_s--210_960x1280_4f6d5bb4-2268-449e-8981-8ca1a760c737.jpg?v=1771920756&width=1946" alt="Laundry Chair 场景图">
+          <img src="https://yetch.studio/cdn/shop/files/Laundry-Chair-Loading_960x1280_compressed_0567a36e-f4f4-421a-b20e-d3d13585a97d.gif?v=1770944060&width=1946" alt="Laundry Chair 动作图">
+        </div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Laundry Chair 半脏衣物收纳椅</h2>
+            <div class="title-links">原页面：<a href="https://yetch.studio/products/laundry-chair">Yetch 商品页</a> ｜ 发现来源：<a href="https://www.theverge.com/tech/895194/laundry-chair-kickstarter-simone-giertz">The Verge</a> ｜ 众筹入口：<a href="https://www.kickstarter.com/projects/simonegiertz/laundry-chair">Kickstarter</a></div>
+          </div>
+          <span class="source-button">家居收纳</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：Kickstarter / 家居媒体</span>
+          <span class="tag blue">适合：家居杂货 / 家具 OEM 客户</span>
+          <span class="tag good">阶段：值得联系工厂</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>椅子+衣物暂挂二合一；旋转挂杆把“半脏衣”从凌乱习惯变成可售卖场景。</div>
+          <div class="field"><strong>日本市场适配</strong>小户型、卧室可视收纳、生活习惯型发明，和 Loft/Francfranc 风格零售相容度高。</div>
+          <div class="field"><strong>供应链判断</strong>适合找木作/软包家具厂做 KD 结构、缩尺版、布色版、平价版；有改良和套装空间。</div>
+          <div class="field"><strong>可信度判断</strong>中高。Yetch 官方商品页与 Kickstarter 同步在线，媒体扩散已形成情绪共鸣。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。官方站点、官方众筹页、媒体报道均可公开访问。</div>
+          <div class="field"><strong>风险点</strong>现款单价高、体积大、国际运费高；若不改 KD，难进日本电商利润模型。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>先让家具厂评估三件事：可拆装结构、扶手挂杆耐久、日式公寓缩尺版。目标不是照抄，而是做 29,800-49,800 日元带故事感的家居单品。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="https://prcdn.freetls.fastly.net/release_image/18357/20/18357-20-c410184b2460b509576e6836b21ac8b5-2597x2186.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="热SEE 主图">
+          <img src="https://prcdn.freetls.fastly.net/release_image/18357/20/18357-20-501922e713eb0f7690ae3bd34ef685af-3900x2600.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="热SEE 佩戴图">
+          <img src="https://prcdn.freetls.fastly.net/release_image/18357/20/18357-20-667ffc3c6948f18ffcde1340da45abae-1000x707.png?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C75&width=1950" alt="热SEE 标识图">
+          <img src="https://newscast.jp/attachments/v0t0oMIO7Uj2DImQ5jdm.png" alt="热SEE 头盔内侧结构图">
+        </div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>热SEE 头盔内置热应激传感器</h2>
+            <div class="title-links">原页面：<a href="https://prtimes.jp/main/html/rd/p/000000020.000018357.html">PR TIMES</a> ｜ 官方页：<a href="https://www.tanizawa.co.jp/products/netsusee/">Tanizawa</a> ｜ 补充来源：<a href="https://newscast.jp/news/2673318">NEWSCAST</a></div>
+          </div>
+          <span class="source-button">高温户外</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本行业发布 / 官方产品页</span>
+          <span class="tag blue">适合：户外园艺 / 安防劳保 / 工具客户</span>
+          <span class="tag good">阶段：可进入供应链验证</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>装在头盔额头位，推定深部体温上升趋势，到阈值直接振动提醒，不依赖工人主观感觉。</div>
+          <div class="field"><strong>日本市场适配</strong>日本高温劳动安全需求强，园艺、建筑、物流、设施维护场景都能接住。</div>
+          <div class="field"><strong>供应链判断</strong>不是普通劳保件，而是“头盔+传感器+提醒逻辑”组合件；适合找可穿戴硬件厂与头盔厂联合评估。</div>
+          <div class="field"><strong>可信度判断</strong>高。2026年6月16日公开发布，且有官方产品链接和展会首发信息。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。PR 页面、官网产品页、公开新闻稿均可验证。</div>
+          <div class="field"><strong>风险点</strong>涉及测量误差、责任边界、IP/算法、劳保认证；消费端不能简单类比医疗级卖点。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>先别急着做同款，先拆成三段：额头贴合结构、提醒逻辑、后台数据化。更现实的切入口是“园艺/户外作业热提醒穿戴件”而不是重劳保全方案。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="https://cdn.mos.cms.futurecdn.net/eoLBauNLymqTvdKK6LUmWf.png" alt="LilMilo 场景图">
+          <img src="https://cdn.mos.cms.futurecdn.net/W2KRdXPFHVE5pXBpThryne.png" alt="LilMilo 主图">
+          <img src="https://lesnumeriques.com/medias/photo/200846574.jpg" alt="LilMilo 对比场景图">
+          <img src="https://geardiary.com/wp-content/uploads/2026/01/Ecovacs-LilMilo.jpg" alt="LilMilo 家庭图">
+        </div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>LilMilo AI 宠物陪伴机器人</h2>
+            <div class="title-links">原页面：<a href="https://www.tomsguide.com/home/smart-home/forget-robot-vacuums-ecovacs-most-exciting-product-at-ces-2026-was-its-upcoming-ai-powered-pet-companion">Tom's Guide CES 报道</a> ｜ 发现来源：<a href="https://www.techradar.com/home/smart-home/ecovacs-new-launch-nearly-made-me-cry-during-my-ces-booth-tour">TechRadar</a> ｜ 补充来源：<a href="https://www.theverge.com/tech/858494/ces-2026-best-new-tech-tv-car-wearable">The Verge Awards</a></div>
+          </div>
+          <span class="source-button">宠物陪伴</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：CES / 国际媒体</span>
+          <span class="tag blue">适合：宠物用品 / 智能陪伴客户</span>
+          <span class="tag warn">阶段：市场热度</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>毛绒化 AI 机器人狗，强调声音识别、触摸反馈、人格成长，不是清洁机器人，是情绪陪伴设备。</div>
+          <div class="field"><strong>日本市场适配</strong>单身、银发、租房不能养宠、疗愈型科技礼品，这些都与日本市场情绪需求匹配。</div>
+          <div class="field"><strong>供应链判断</strong>短期不适合普通 OEM 跟款；但“毛绒外壳+简单互动+低门槛陪伴”会带动玩具与宠物电子周边创新。</div>
+          <div class="field"><strong>可信度判断</strong>中。CES 曝光强，但价格、发售时间、功能边界尚不完整，仍偏概念先行。</div>
+          <div class="field"><strong>公开可验证程度</strong>中高。公开媒体多，官方完整商品页暂未见成熟零售化信息。</div>
+          <div class="field"><strong>风险点</strong>云服务依赖、交互真实感与续航成本、隐私采集、用户复购逻辑都未跑通。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>把它当成“趋势哨兵”而不是立即打样对象。更现实的切入是宠物情绪玩具、陪伴摆件、轻交互毛绒硬件三条降维路线。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery two">
+          <img src="https://cdn.mos.cms.futurecdn.net/F42gM8hRiWbEfPv7gQ4RBh.jpg" alt="Ultramarine 水下场景">
+          <img src="https://images.ecovacs.com/global/images/products/ultramarine/p1/kv1.png" alt="Ultramarine 主图">
+        </div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>Ultramarine P1 无线泳池清洁机器人</h2>
+            <div class="title-links">原页面：<a href="https://www.ecovacs.com/us/shop/ultramarine-robotic-pool-cleaner/ultramarine-p1">ECOVACS 官方页</a> ｜ 发现来源：<a href="https://www.tomsguide.com/home/smart-home/forget-robot-vacuums-ecovacs-most-exciting-product-at-ces-2026-was-its-upcoming-ai-powered-pet-companion">Tom's Guide</a> ｜ 上市追踪：<a href="https://www.t3.com/home-living/garden/ive-been-waiting-months-for-ecovacs-first-ever-robot-pool-cleaner-and-its-finally-here">T3</a></div>
+          </div>
+          <span class="source-button">户外清洁</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：官方商品页 / CES 媒体</span>
+          <span class="tag blue">适合：家用小电器 / 户外园艺客户</span>
+          <span class="tag warn">阶段：值得联系工厂</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>4800GPH 吸力、双层过滤、3 小时续航、无线 APP 控制，主打“更低门槛的泳池自动维护”。</div>
+          <div class="field"><strong>日本市场适配</strong>日本本土泳池家用盘子有限，但别墅、民宿、温泉旅宿、东南亚客户与跨境高客单场景可吃到。</div>
+          <div class="field"><strong>供应链判断</strong>技术门槛高，适合能力型客户，不适合普通卖家跟款；但相关刷辊、过滤、密封和无线控制方案值得研究。</div>
+          <div class="field"><strong>可信度判断</strong>高。官方商品页已上线，售价 499.99 美元，参数清晰。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。官方页、媒体报道、公开产品图均可验证。</div>
+          <div class="field"><strong>风险点</strong>日本需求天花板有限，售后故障率、IP68 和电池维护要求高，低价复制不可行。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>如果客户有户外电器基础，建议研究“低配版无线水下清洁设备”或“刷辊+过滤耗材”两条周边机会，不要直接挑战整机品牌位。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="https://prcdn.freetls.fastly.net/release_image/17608/257/17608-257-eceee7f92dba64b0e1a4ea680595f801-3900x2600.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="Lululun 主图">
+          <img src="https://prcdn.freetls.fastly.net/release_image/17608/257/17608-257-c56a82bd69c8a69e272195af3144e639-940x683.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C75&width=1950" alt="Lululun 使用场景">
+          <img src="https://prcdn.freetls.fastly.net/release_image/17608/257/17608-257-c8369efdf3343eae359d0db5d5ccca48-2000x1239.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="Lululun 成分图">
+          <img src="https://prcdn.freetls.fastly.net/release_image/17608/257/17608-257-77736bd7cb30e608911288fcaa4665fe-3900x2573.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="Lululun 局部卖点图">
+        </div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>LuLuLun Caffeine Serum Shot 咖啡因安瓶</h2>
+            <div class="title-links">原页面：<a href="https://lululun.com/shop/products/LUAX011101">LuLuLun 商品页</a> ｜ 发现来源：<a href="https://prtimes.jp/main/html/rd/p/000000257.000017608.html">PR TIMES</a></div>
+          </div>
+          <span class="source-button">美容个护</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本品牌 / PR 发布</span>
+          <span class="tag blue">适合：美容个护 / OEM 客户</span>
+          <span class="tag good">阶段：可进入供应链验证</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>把“脸部浮肿”做成即时可感知需求，用咖啡因+PDRN+维 C 做 1 次 1 支的个包装集中护理。</div>
+          <div class="field"><strong>日本市场适配</strong>日本很吃“早晨急救、重要场合前、旅行便携”的护理叙事，个包装逻辑适合药妆与礼盒双通路。</div>
+          <div class="field"><strong>供应链判断</strong>非常适合中国 OEM 评估。重点不只配方，而是安瓶外观、便携包装、即时功效叙事与成分合规。</div>
+          <div class="field"><strong>可信度判断</strong>高。6 月 15 日新品发布，官方商品页可下钻，卖点清晰。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。PR 页面与官方商品页均公开可查。</div>
+          <div class="field"><strong>风险点</strong>“消肿”表达在不同市场的合规边界不同；PDRN 与功效宣称要严格按目标市场法规处理。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>建议同步评估两条 OEM 路线：日系轻医美感安瓶版、旅行装应急护理版。重点验证单支成本、包材泄漏率和日文化文案表达。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="https://prcdn.freetls.fastly.net/release_image/10456/217/10456-217-9182b6fd0734228c839badd69853b8dc-3900x1989.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="Eight The Thalasso 主图">
+          <img src="https://prcdn.freetls.fastly.net/release_image/10456/217/10456-217-86fd1703e9a7b24a163ae23efa416e6d-3900x1989.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="Eight The Thalasso 洗发水">
+          <img src="https://prcdn.freetls.fastly.net/release_image/10456/217/10456-217-ec88cf9673910c75b390489df8a20f18-3900x1989.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="Eight The Thalasso 护发素">
+          <img src="https://prcdn.freetls.fastly.net/release_image/10456/217/10456-217-65f291983b24d6bb19a0f00d1d96d5c7-3900x1989.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="Eight The Thalasso 试用装">
+        </div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>8 THE THALASSO SR 丝感顺滑控毛躁线</h2>
+            <div class="title-links">原页面：<a href="https://eightthethalasso.jp/">品牌官网</a> ｜ 发现来源：<a href="https://prtimes.jp/main/html/rd/p/000000217.000010456.html">PR TIMES</a></div>
+          </div>
+          <span class="source-button">美发护理</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本美妆品牌</span>
+          <span class="tag blue">适合：美容个护 / 日化 OEM 客户</span>
+          <span class="tag good">阶段：可进入供应链验证</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>抓住梅雨季“毛躁、膨胀、没光泽”痛点，用高压处理丝蛋白做新一条顺滑线。</div>
+          <div class="field"><strong>日本市场适配</strong>湿气型毛躁是日本长期刚需，且试用装、替换装、Loft/Plaza 先行打法非常典型。</div>
+          <div class="field"><strong>供应链判断</strong>方向成熟但仍有机会，关键在香型、液感、丝滑心智、视觉体系和旅行装组合，不是卷低价洗护。</div>
+          <div class="field"><strong>可信度判断</strong>高。品牌新品节奏清晰，官方说明了发售时间与渠道。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。PR 与品牌站均公开，素材完整。</div>
+          <div class="field"><strong>风险点</strong>赛道竞争拥挤，如果没有“季节性场景 + 包装 + 香味”差异，很容易沦为同质替代。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>更适合做“高湿气候专项护理”小系列，不必硬做大单品。建议打样洗发+发膜+1DAY 旅行包三件套，测试日本客户对“雨季控毛躁”命名接受度。</div>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <div>
+        <div class="gallery">
+          <img src="https://prcdn.freetls.fastly.net/release_image/79792/1023/79792-1023-e198f1ffbfdf775b9a7bf4fc62b1fbaf-1920x1280.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="断热铝片主图">
+          <img src="https://prcdn.freetls.fastly.net/release_image/79792/1023/79792-1023-06f62f4bbb2e4490a3bbf135b0dbe061-1600x1600.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="断热效果图">
+          <img src="https://prcdn.freetls.fastly.net/release_image/79792/1023/79792-1023-1faf3564e3e7f7935e6e35816f8a4216-1600x1600.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="安装步骤图">
+          <img src="https://prcdn.freetls.fastly.net/release_image/79792/1023/79792-1023-215be2eb73e7cd8da8a8e2c2eaa08f24-1600x1600.jpg?auto=webp&bg-color=fff&fit=bounds&format=jpeg&height=1350&quality=85%2C65&width=1950" alt="产品细节图">
+        </div>
+      </div>
+      <div>
+        <div class="product-title">
+          <div>
+            <h2>CRAFTWORKS 车内断热铝片卷材</h2>
+            <div class="title-links">原页面：<a href="https://prtimes.jp/main/html/rd/p/000001023.000079792.html">PR TIMES</a> ｜ 销售渠道：<a href="https://www.amazon.co.jp/stores/page/46C54D85-E487-49BE-B42B-2C70791A0BE5">Amazon 公式店</a> / <a href="https://www.rakuten.co.jp/auto1direct/">Rakuten</a> / <a href="https://store.shopping.yahoo.co.jp/wadoo/">Yahoo! Shopping</a></div>
+          </div>
+          <span class="source-button">车品户外</span>
+        </div>
+        <div class="tags">
+          <span class="tag">来源类型：日本电商 / PR 发布</span>
+          <span class="tag blue">适合：户外用品 / 车品 / 材料类客户</span>
+          <span class="tag good">阶段：值得联系工厂</span>
+        </div>
+        <div class="grid">
+          <div class="field"><strong>核心卖点</strong>“剪开就能贴”的车内隔热卷材，把高温、噪音、车中泊舒适度三件事一次打包。</div>
+          <div class="field"><strong>日本市场适配</strong>猛暑、车中泊、轻改装、露营需求都能承接，且 Amazon/Rakuten/Yahoo 三平台一起铺货，说明电商逻辑成熟。</div>
+          <div class="field"><strong>供应链判断</strong>非常适合中国材料与车品工厂跟进。关键在厚度选择、粘性稳定、施工工具、对比测试素材与套装化。</div>
+          <div class="field"><strong>可信度判断</strong>高。品牌、售价带、渠道和测试叙事都已公开。</div>
+          <div class="field"><strong>公开可验证程度</strong>高。PR 与电商官方店公开可查。</div>
+          <div class="field"><strong>风险点</strong>一旦没有真实测试支撑，评价区容易翻车；安装门槛和气味控制也会影响复购。</div>
+          <div class="field full"><strong>产品级下一步建议</strong>建议立即找材料厂比三种结构：轻量 5mm、均衡 7mm、厚实 10mm，同时准备“车中泊/高温夏季/静音”三套不同卖点包装。</div>
+        </div>
+      </div>
+    </article>
+
+    <h3 class="section-title">来源链接</h3>
+    <section class="source-list">
+      <ol>
+        <li><a href="https://yetch.studio/products/laundry-chair">Yetch Studio - Laundry Chair</a></li>
+        <li><a href="https://www.kickstarter.com/projects/simonegiertz/laundry-chair">Kickstarter - Laundry Chair</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000000020.000018357.html">PR TIMES - 热SEE</a></li>
+        <li><a href="https://www.tanizawa.co.jp/products/netsusee/">Tanizawa - 热SEE官方页</a></li>
+        <li><a href="https://www.tomsguide.com/home/smart-home/forget-robot-vacuums-ecovacs-most-exciting-product-at-ces-2026-was-its-upcoming-ai-powered-pet-companion">Tom's Guide - LilMilo / Ultramarine</a></li>
+        <li><a href="https://www.ecovacs.com/us/shop/ultramarine-robotic-pool-cleaner/ultramarine-p1">ECOVACS - Ultramarine P1 官方页</a></li>
+        <li><a href="https://lululun.com/shop/products/LUAX011101">LuLuLun - Caffeine Serum Shot</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000000257.000017608.html">PR TIMES - LuLuLun 新品发布</a></li>
+        <li><a href="https://eightthethalasso.jp/">8 THE THALASSO 官方站</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000000217.000010456.html">PR TIMES - 8 THE THALASSO SR 新线</a></li>
+        <li><a href="https://prtimes.jp/main/html/rd/p/000001023.000079792.html">PR TIMES - CRAFTWORKS 断热铝片</a></li>
+        <li><a href="https://www.amazon.co.jp/stores/page/46C54D85-E487-49BE-B42B-2C70791A0BE5">CRAFTWORKS Amazon 官方店</a></li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>
