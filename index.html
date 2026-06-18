@@ -33,11 +33,15 @@
       padding: 56px 20px 80px;
     }
 
-    .hero {
-      padding: 28px;
+    .hero,
+    .section {
       border: 1px solid var(--line);
       background: var(--paper);
       box-shadow: 0 18px 40px rgba(23, 49, 59, 0.08);
+    }
+
+    .hero {
+      padding: 28px;
     }
 
     .eyebrow {
@@ -89,13 +93,18 @@
     .section {
       margin-top: 26px;
       padding: 22px 24px;
-      border: 1px solid var(--line);
-      background: rgba(255, 255, 255, 0.9);
     }
 
     .section h2 {
       margin: 0 0 14px;
       font-size: 20px;
+    }
+
+    .helper {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
     }
 
     .list {
@@ -127,6 +136,13 @@
       text-decoration: none;
       font-weight: 700;
     }
+
+    .empty {
+      padding: 18px;
+      border: 1px dashed var(--line);
+      color: var(--muted);
+      background: #fbfdfe;
+    }
   </style>
 </head>
 <body>
@@ -136,31 +152,49 @@
       <h1>每日新颖消费品情报报告</h1>
       <p class="desc">面向日本电商卖家、OEM 客户、家居杂货、美容个护、户外园艺、宠物用品与家用小电器客户。报告聚焦新品、趋势品、潜力品，并加入供应链可落地判断。</p>
       <div class="cta-row">
-        <a class="cta" href="./daily-product-intelligence-2026-06-16.html">查看最新报告</a>
+        <a class="cta" id="latest-link" href="./latest-report.html">查看最新报告</a>
         <a class="cta secondary" href="./latest-report.html">固定入口</a>
       </div>
+      <p class="helper">后续更新只需要上传新的日报 HTML，并把 <code>reports.json</code> 最上面插入一条新记录；首页和固定入口会自动跟着更新。</p>
     </section>
 
     <section class="section">
       <h2>报告归档</h2>
-      <div class="list">
-        <div class="item">
-          <strong>2026-06-16</strong>
-          <p>7 个产品机会，覆盖家居收纳、高温作业穿戴、宠物陪伴、泳池清洁、美容安瓶、洗护新品与车品隔热材料。</p>
-          <a href="./daily-product-intelligence-2026-06-16.html">打开报告</a>
-        </div>
-        <div class="item">
-          <strong>2026-06-15</strong>
-          <p>历史报告归档，可保留作对比参考。</p>
-          <a href="./daily-product-intelligence-2026-06-15.html">打开报告</a>
-        </div>
-        <div class="item">
-          <strong>2026-06-13</strong>
-          <p>较早版本报告归档，可保留作选品方向回看。</p>
-          <a href="./daily-product-intelligence-2026-06-13.html">打开报告</a>
-        </div>
+      <div class="list" id="report-list">
+        <div class="empty">正在加载报告列表...</div>
       </div>
     </section>
   </main>
+
+  <script>
+    async function loadReports() {
+      const list = document.getElementById("report-list");
+      const latestLink = document.getElementById("latest-link");
+
+      try {
+        const response = await fetch("./reports.json", { cache: "no-store" });
+        if (!response.ok) throw new Error("manifest missing");
+        const reports = await response.json();
+
+        if (!Array.isArray(reports) || reports.length === 0) {
+          list.innerHTML = '<div class="empty">还没有可展示的日报记录。</div>';
+          return;
+        }
+
+        latestLink.href = reports[0].file;
+        list.innerHTML = reports.map((report) => `
+          <div class="item">
+            <strong>${report.date}</strong>
+            <p>${report.summary}</p>
+            <a href="${report.file}">打开报告</a>
+          </div>
+        `).join("");
+      } catch (error) {
+        list.innerHTML = '<div class="empty">报告清单加载失败。请确认 <code>reports.json</code> 已上传到仓库根目录。</div>';
+      }
+    }
+
+    loadReports();
+  </script>
 </body>
 </html>
